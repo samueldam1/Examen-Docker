@@ -1,0 +1,21 @@
+version: '3.1'
+
+services:
+  prestashop:
+    image: prestashop/prestashop
+    ports:
+      - "8080:80"
+    environment:
+      - DB_SERVER=prestashop-db
+      - DB_USER=samu
+      - DB_PASSWD=1234
+    depends_on:
+      - prestashop-db
+
+  prestashop-db:
+    image: mariadb
+    environment:
+      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_DATABASE=prestashop-db
+      - MYSQL_USER=samu
+      - MYSQL_PASSWORD=1234
