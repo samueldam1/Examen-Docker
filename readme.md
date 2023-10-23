@@ -90,21 +90,27 @@ Este servicio levanta un contenedor Prestashop de nombre 'prestashop' con la sig
 ![](./imagenes/docker.png)
 _Contenedores levantados._
 
-- Una vez levantados los contenedores si nos conectamos a localhost:8080 o (IP_equipo):8080 deberiamos ver algo como esto:
 
-![](./imagenes/localhost.png)
-_Prestashop funcionando y alojado en el puerto '8080'._
-
-Y si intentamos hacer conexión con la base de datos mediante PhPStorm veriamos algo como esto:
+- Al intentar hacer conexión con la base de datos mediante PhPStorm veriamos algo como esto:
 
 ![](./imagenes/test_conn.png)
 _Conexión con la base de datos 'prestashop-db' exitosa._
 
-Si mostramos todas las tablas vemos que 'prestashop-db' se ha creado con éxito.
+
+- Si mostramos todas las tablas vemos que 'prestashop-db' se ha creado con éxito.
+
 ![](./imagenes/ejemplo_conn.png)
 _Todas las tables de nuestra base de datos MariaDB._
 
-Una vez configurada nuestra tienda veriamos esto al conectarnos
+### Configuracion Prestashop
+
+- Al evantar los contenedores si nos conectamos a localhost:8080 o (IP_equipo):8080 deberiamos ver algo como esto:
+
+![](./imagenes/localhost.png)
+_Prestashop funcionando y alojado en el puerto '8080'._
+
+
+- Una vez configurada nuestra tienda veriamos esto al conectarnos.
 
 ![](./imagenes/push&bear.png)
 _Pagina principal de nuestra tienda 'Push&Bear'._
