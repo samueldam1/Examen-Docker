@@ -21,6 +21,8 @@ services:
 
   prestashop-db:
     image: mariadb
+    ports:
+      - "3307:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=1234
       - MYSQL_DATABASE=prestashop-db
@@ -61,6 +63,8 @@ Este servicio levanta un contenedor Prestashop de nombre 'prestashop' con la sig
 ```
   prestashop-db:
     image: mariadb
+    ports:
+      - "3307:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=1234
       - MYSQL_DATABASE=prestashop-db
@@ -73,6 +77,8 @@ Este servicio levanta un contenedor Prestashop de nombre 'prestashop' con la sig
 
 'image': Especifica la imagen de Docker que se utilizará para MariaDB.
 
+'ports' Mapea el puerto 3306 del contenedor de MariaDB al puerto 3307 de nuestro sistema.
+
 'environment' Establece variables de entorno que configuran la base de datos MariaDB. 
 
 - MYSQL_ROOT_PASSWORD: Contraseña del usuario root de la base de datos. 
@@ -82,10 +88,23 @@ Este servicio levanta un contenedor Prestashop de nombre 'prestashop' con la sig
 ## Levantando los contenedores
 
 ![](./imagenes/docker.png)
-_Contenedores levantados_
+_Contenedores levantados._
 
 - Una vez levantados los contenedores si nos conectamos a localhost:8080 o (IP_equipo):8080 deberiamos ver algo como esto:
 
 ![](./imagenes/localhost.png)
-_Prestashop funcionando y alojado en el puerto '8080'_
+_Prestashop funcionando y alojado en el puerto '8080'._
 
+Y si intentamos hacer conexión con la base de datos mediante PhPStorm veriamos algo como esto:
+
+![](./imagenes/test_conn.png)
+_Conexión con la base de datos 'prestashop-db' exitosa._
+
+Si mostramos todas las tablas vemos que 'prestashop-db' se ha creado con éxito.
+![](./imagenes/ejemplo_conn.png)
+_Todas las tables de nuestra base de datos MariaDB._
+
+Una vez configurada nuestra tienda veriamos esto al conectarnos
+
+![](./imagenes/push&bear.png)
+_Pagina principal de nuestra tienda 'Push&Bear'._

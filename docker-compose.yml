@@ -14,8 +14,11 @@ services:
 
   prestashop-db:
     image: mariadb
+    ports:
+      - "3307:3306"
     environment:
-      - MYSQL_ROOT_PASSWORD=1234
+      - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=prestashop-db
       - MYSQL_USER=samu
       - MYSQL_PASSWORD=1234
+
