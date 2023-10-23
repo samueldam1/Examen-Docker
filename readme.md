@@ -1,4 +1,4 @@
-# Configuracion de Prestashop para MariaDB
+# Levantar Prestashop para MariaDB
 
 Este archivo de Docker Compose está hecho para levantar un entorno de desarrollo en Prestashop junto a una base de datos MariaDB. Para ello levantaremos dos contenedores: uno para ejecutar Prestashop y otro para alojar la base de datos con MariaDB.
 
@@ -78,3 +78,14 @@ Este servicio levanta un contenedor Prestashop de nombre 'prestashop' con la sig
 - MYSQL_ROOT_PASSWORD: Contraseña del usuario root de la base de datos. 
 - MYSQL_DATABASE: Nombre de la base de datos que se creará. 
 - MYSQL_USER y MYSQL_PASSWORD: Nombre de usuario y la contraseña de la base de datos que PrestaShop utilizará para conectarse a MariaDB.
+
+## Levantando los contenedores
+
+![](./imagenes/docker.png)
+_Contenedores levantados_
+
+- Una vez levantados los contenedores si nos conectamos a localhost:8080 o (IP_equipo):8080 deberiamos ver algo como esto:
+
+![](./imagenes/localhost.png)
+_Prestashop funcionando y alojado en el puerto '8080'_
+
